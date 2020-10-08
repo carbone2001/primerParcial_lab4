@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PrimerParcialLab4"
+    }
+  },
+  "defaultProject": "PrimerParcialLab4",
+  "cli": {
+    "analytics": false
+  }
 }
