@@ -30,7 +30,6 @@ export class MostrarDetallesComponent implements OnInit {
       infoJson.abilities.forEach(e => {
         this.data.ObtenerInfoHabilidad(e.ability.url).subscribe((r)=>{
           arrayInfoHabilidades.push(r);
-          console.log(r);
         })
       });
 
@@ -40,10 +39,7 @@ export class MostrarDetallesComponent implements OnInit {
       this.galeriaImagenes.push(infoJson.sprites["front_shiny"]);
       this.pokemon = infoJson;
       this.pokemon.detallesHabilidades = arrayInfoHabilidades;
-      /*this.data.ObtenerInfoHabilidad(info.abilities[0].ability.url).subscribe((res)=>{
-        console.log(res);
-      })*/
-      console.log(infoJson);
+
       this.spinner.CloseDialog();
     })
   }

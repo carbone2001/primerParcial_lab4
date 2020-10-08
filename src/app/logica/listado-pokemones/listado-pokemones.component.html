@@ -1,43 +1,31 @@
-<p>Cantidad De Items</p>
-<mat-radio-group aria-label="Select an option">
-    <mat-radio-button (click)="ActualizarLista(10)" value="1">10 </mat-radio-button> <br>
-    <mat-radio-button (click)="ActualizarLista(20)" value="1">20 </mat-radio-button><br>
-    <mat-radio-button (click)="ActualizarLista(30)" value="1">30 </mat-radio-button><br>
-  </mat-radio-group>
-  <br>
-<!--form action="">
-    <table>
-        <tr>
-            <td>10</td><td>
-                <input type="radio" name="limit" value="10" (click)="ActualizarLista(10)">
-            </td>
-        </tr>
-        <tr>
-            <td>20</td>
-            <td><input type="radio" name="limit"value="20" (click)="ActualizarLista(20)" checked></td>
-        </tr>
-        <tr>
-            <td>
-                30
-            </td>
-            <td>
-                <input type="radio" name="limit" value="30" (click)="ActualizarLista(30)">
-            </td>
-        </tr>
-    </table>
+<mat-form-field appearance="fill">
+  <mat-label>Cantidad de Items</mat-label>
+  <mat-select value="20">
+    <mat-option value="10" (click)="ActualizarLista(10)">
+      10
+    </mat-option>
+    <mat-option value="20" (click)="ActualizarLista(20)">
+      20
+    </mat-option>
+    <mat-option value="30" (click)="ActualizarLista(30)">
+      30
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
 
-</form-->
 <br>
 <table>
-    <div *ngFor="let pok of data.listaPokemones">
-        <tr>
-            <td>
-                <p>{{pok.name}}</p>
-            </td>
-            <td>
-                <button mat-raised-button color="primary" (click)="VerDetalle(pok)">detalle</button>
-            </td>
-        </tr>
-        
-    </div>
+  <div *ngFor="let pok of data.listaPokemones">
+    <tr>
+      <mat-card>
+        <td>
+          <p style="font-size: 20px;">{{pok.name}}</p>
+        </td>
+        <td>
+          <button mat-raised-button color="primary" (click)="VerDetalle(pok)">detalle</button>
+        </td>
+      </mat-card>
+    </tr>
+  </div>
 </table>

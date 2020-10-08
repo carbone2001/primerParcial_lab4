@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
   listaPokemones:any;
   pokemonElegidoURL:any;
+  pokemonInfo;
+  galeriaImagenes = [];
   constructor(
     public http : HttpClient
   ) { }

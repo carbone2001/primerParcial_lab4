@@ -1,17 +1,22 @@
-<h1>Nombre: {{pokemon.name}}</h1>
-<h2>Rango: {{pokemon.base_experience}}</h2>
-<h2>Habilidades:</h2>
-<div *ngFor="let habilidad of pokemon.detallesHabilidades">
-    <h3>{{habilidad.name}}:</h3>
-    <div *ngFor="let efecto of habilidad.effect_entries">
-        <p *ngIf="(efecto.language.name == 'en')">{{efecto.effect}}</p>
-    </div>
+<div align="center">
+    <mat-card style="width: 50%;margin-top: 5%">
+        <h1>Nombre: {{pokemon.name}}</h1>
+        <h2>Rango: {{pokemon.base_experience}}</h2>
+        <h2>Habilidades:</h2>
+        <div *ngFor="let habilidad of pokemon.detallesHabilidades">
+            <h3><b>{{habilidad.name}}:</b></h3>
+            <div *ngFor="let efecto of habilidad.effect_entries">
+                <p *ngIf="(efecto.language.name == 'en')">{{efecto.effect}}</p>
+            </div>
+        </div>
+        <br>
+        <h2>Imagenes</h2>
+        <mat-grid-list cols="4" rowHeight="1:1">
+            <div *ngFor="let imagen of galeriaImagenes">
+                <mat-grid-tile>
+                    <img [src]="imagen">
+                </mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    </mat-card>
 </div>
-<h2>Galeria de Imagenes</h2>
-<mat-grid-list cols="4" rowHeight="1:1">
-    <div *ngFor="let imagen of galeriaImagenes">
-        <mat-grid-tile>
-            <img [src]="imagen">
-        </mat-grid-tile>
-    </div>
-</mat-grid-list>

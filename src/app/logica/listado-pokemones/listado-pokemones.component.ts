@@ -37,7 +37,6 @@ export class ListadoPokemonesComponent implements OnInit {
       this.data.listaPokemones = listaJson.results;
       this.spinner.CloseDialog();
     });
-    console.log("activado");
   }
 
 }

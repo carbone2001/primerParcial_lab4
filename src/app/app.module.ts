@@ -17,6 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatDialogModule,
     MatButtonModule,
     MatRadioModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
+    MatSelectModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
